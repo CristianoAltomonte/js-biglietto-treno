@@ -17,14 +17,13 @@ function generaPrezzo(){
     let prezzoBiglietto = parseFloat(numeroKm * prezzoKm);
     let minorenni = prezzoBiglietto * 0.2;
     let over65 = prezzoBiglietto * 0.4;
-    console.log(over65, minorenni, prezzoBiglietto, age, numeroKm);
 
 
     if (age <= 18) {
     prezzoBiglietto = (prezzoBiglietto - minorenni).toFixed(2);
     }
 
-    if (age >= 65) {
+    else if (age >= 65) {
     prezzoBiglietto = (prezzoBiglietto - over65).toFixed(2) ;
     }
 
@@ -32,6 +31,6 @@ function generaPrezzo(){
     prezzoBiglietto = prezzoBiglietto.toFixed(2) ;
     }
 
-    document.getElementById('costoBiglietto').innerHTML = "Il prezzo del biglietto è: " +prezzoBiglietto+ "€";
-    console.log(prezzoBiglietto);
-    }
+    document.getElementById('costoBiglietto').innerHTML = "Il prezzo del Biglietto è: " +prezzoBiglietto+ "€";
+    
+}
