@@ -9,23 +9,29 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 */ 
 
 
-let numeroKm = prompt('Numero chilometri da percorrere ?');
-let age = prompt('Quanti anni ha ?');
-const prezzoKm = 0.21;
-let prezzoBiglietto = numeroKm * prezzoKm;
-let minorenni = prezzoBiglietto * 0.2;
-let over65 = prezzoBiglietto * 0.4;
+function generaPrezzo(){
+    let numeroKm = parseFloat(document.getElementById('numeroKm').value);
+    let age = parseInt(document.getElementById('age').value);
 
-if (age <=18) {
+    const prezzoKm = 0.21;
+    let prezzoBiglietto = parseFloat(numeroKm * prezzoKm);
+    let minorenni = prezzoBiglietto * 0.2;
+    let over65 = prezzoBiglietto * 0.4;
+    console.log(over65, minorenni, prezzoBiglietto, age, numeroKm);
+
+
+    if (age <= 18) {
     prezzoBiglietto = (prezzoBiglietto - minorenni).toFixed(2);
-}
+    }
 
-if (age >= 65) {
+    if (age >= 65) {
     prezzoBiglietto = (prezzoBiglietto - over65).toFixed(2) ;
-}
+    }
 
-else {
+    else {
     prezzoBiglietto = prezzoBiglietto.toFixed(2) ;
-}
+    }
 
-document.getElementById('costoBiglietto').innerHTML = 'Il prezzo del biglietto è: ' + prezzoBiglietto + '€';
+    document.getElementById('costoBiglietto').innerHTML = "Il prezzo del biglietto è: " +prezzoBiglietto+ "€";
+    console.log(prezzoBiglietto);
+    }
