@@ -1,4 +1,12 @@
-.card{
-    margin: 15vh auto;
+body {
+  background-image: url('https://www.evolutiontravel.eu/wp-content/uploads/sites/2/2019/05/viaggi-treno-evolution-travel.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  }
+#form_login {
+  left      : 50%;
+  top       : 50%;
+  position  : absolute;
+  transform : translate(-50%, -50%);
+}
